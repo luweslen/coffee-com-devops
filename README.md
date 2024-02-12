@@ -5,7 +5,7 @@ Este repositório abriga anotações e testes práticos provenientes de uma ment
 
 ## Roteiro
 
-- Configurações de terminal
+- Configurações de ambiente
 - CI/CD (Github Actions)
 - IAC
 - Terraform
