@@ -6,7 +6,7 @@ Este repositório abriga anotações e testes práticos provenientes de uma ment
 ## Roteiro
 
 - Configurações de ambiente
-- CI/CD (Github Actions)
+- CI/CD com Github Actions
 - IAC
 - Terraform
 - Ansible
