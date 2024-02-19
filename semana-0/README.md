@@ -1,6 +1,6 @@
 # Configurações de ambiente
 
-## Roteiro <a name="yaml"></a>
+## Roteiro
 
 - [YAML](#yaml)
   - [Sintaxe](#sintaxe)
