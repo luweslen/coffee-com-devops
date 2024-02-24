@@ -119,10 +119,7 @@ jobs:
 
 ## Exercício Prático <a name="exercise"></a>
 
-1. Criar um arquivo de workflow que executa testes em uma base de código a partir do
-push que modifica arquivos em uma pasta específica.
-  - Projeto base: https://github.com/chief-wizard/serverless-jest-example
-2. Escrever um Workflow reutilizável
+Escrever um Workflow reutilizável
   - Projeto base: https://github.com/luweslen/luweslen.com
 
 ## Links/Referências <a name="link"></a>

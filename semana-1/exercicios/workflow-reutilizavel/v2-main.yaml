@@ -1,0 +1,21 @@
+name: Push branch main
+
+on:
+  push: 
+    branches: [main]
+
+jobs:
+  build:
+    uses: ./.github/workflows/install-and-run-command.yaml
+    with:
+      command: yarn build
+        
+  eslint:
+    uses: ./.github/workflows/install-and-run-command.yaml
+    with:
+      command: yarn lint
+
+  unit-test:
+    uses: ./.github/workflows/install-and-run-command.yaml
+    with:
+      command: yarn test
