@@ -124,6 +124,6 @@ Escrever um Workflow reutilizável
 
 ## Links/Referências <a name="link"></a>
 
-- (GitHub Actions)[https://docs.github.com/pt/actions]
-- (O que é CI/CD?)[https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd]
-- (Continuous integration vs. delivery vs. deployment)[https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment]
+- [GitHub Actions](https://docs.github.com/pt/actions)
+- [O que é CI/CD?](https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd)
+- [Continuous integration vs. delivery vs. deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
