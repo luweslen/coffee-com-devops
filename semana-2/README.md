@@ -1,4 +1,4 @@
-# Infrastructure as a Code - IAC 
+# Infrastructure as a Code | Terraform
 
 ## Roteiro
 
