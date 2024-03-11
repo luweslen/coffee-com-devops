@@ -7,7 +7,7 @@ on:
 
 jobs:
   validation:
-  uses: ./.github/workflows/terraform_validate.yaml
+    uses: ./.github/workflows/terraform_validate.yaml
 
   apply:
     runs-on: ubuntu-latest
