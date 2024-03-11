@@ -30,7 +30,7 @@ resource "github_repository" "coffee-com-devops" {
 }
 
 resource "github_branch" "example" {
-  branch = "example"
+  branch     = "example"
   repository = github_repository.coffee-com-devops.name
 }
 
