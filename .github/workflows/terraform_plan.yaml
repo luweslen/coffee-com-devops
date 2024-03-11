@@ -1,0 +1,30 @@
+name: Terraform Plan
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'terraform/**'
+
+jobs:
+  validation:
+  uses: ./.github/workflows/terraform_validate.yaml
+
+  plan:
+    runs-on: ubuntu-latest
+    needs: validation
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./terraform
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: ./terraform

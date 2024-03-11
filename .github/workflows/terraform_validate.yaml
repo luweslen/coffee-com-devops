@@ -1,0 +1,26 @@
+name: Terraform Validation
+
+on:
+  workflow_call:
+
+jobs:
+  terraform_validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./terraform
+
+      - name: Terraform Validate
+        run: terraform validate
+        working-directory: ./terraform
+
+      - name: Terraform Lint
+        run: terraform fmt -check
+        working-directory: ./terraform
