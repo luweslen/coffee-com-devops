@@ -1,6 +1,7 @@
 name: Terraform Apply
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'terraform_v[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
