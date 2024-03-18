@@ -3,8 +3,7 @@ resource "aws_iam_user" "luciano_weslen" {
 }
 
 resource "aws_iam_user_login_profile" "luciano_weslen" {
-  user                    = aws_iam_user.luciano_weslen.name
-  password_reset_required = true
+  user = aws_iam_user.luciano_weslen.name
 }
 
 data "aws_iam_policy_document" "iam_access_policy_document" {
