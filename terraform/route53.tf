@@ -1,3 +1,3 @@
 resource "aws_route53_zone" "luvops" {
-  name = "luvops.zrp.io"
+  name = "luvops.zrp.dev"
 }
