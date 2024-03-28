@@ -8,7 +8,13 @@ resource "aws_iam_user_login_profile" "luciano_weslen" {
 
 data "aws_iam_policy_document" "iam_access_policy_document" {
   statement {
-    actions   = ["iam:*"]
+    actions = [
+      "iam:*",
+      "s3:*",
+      "route53:*",
+      "route53domains:*",
+      "acm:*",
+    ]
     resources = ["*"]
   }
 }
@@ -19,3 +25,4 @@ resource "aws_iam_user_policy" "luciano_weslen" {
 
   policy = data.aws_iam_policy_document.iam_access_policy_document.json
 }
+
