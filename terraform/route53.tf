@@ -18,3 +18,27 @@ resource "aws_route53_record" "luvops_cert" {
   type            = each.value.type
   zone_id         = aws_route53_zone.luvops.zone_id
 }
+
+resource "aws_route53_record" "luvops_site_A" {
+  zone_id = aws_route53_zone.luvops.zone_id
+  name    = "site.luvops.zrp.dev"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.luvops.domain_name
+    zone_id                = aws_cloudfront_distribution.luvops.hosted_zone_id
+    evaluate_target_health = true
+  }
+}
+
+resource "aws_route53_record" "luvops_site_AAAA" {
+  zone_id = aws_route53_zone.luvops.zone_id
+  name    = "site.luvops.zrp.dev"
+  type    = "AAAA"
+
+  alias {
+    name                   = aws_cloudfront_distribution.luvops.domain_name
+    zone_id                = aws_cloudfront_distribution.luvops.hosted_zone_id
+    evaluate_target_health = true
+  }
+}

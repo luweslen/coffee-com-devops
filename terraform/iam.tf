@@ -14,6 +14,8 @@ data "aws_iam_policy_document" "iam_access_policy_document" {
       "route53:*",
       "route53domains:*",
       "acm:*",
+      "cloudfront:*",
+      "rds:*",
     ]
     resources = ["*"]
   }
