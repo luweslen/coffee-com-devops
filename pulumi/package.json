@@ -1,0 +1,13 @@
+{
+  "name": "project",
+  "main": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "1.7.1",
+    "@types/node": "20"
+  },
+  "dependencies": {
+    "@pulumi/aws": "6.32.0",
+    "@pulumi/pulumi": "3.113.0"
+  }
+}
