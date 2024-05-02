@@ -8,7 +8,8 @@ inputs:
 runs: 
   using: composite
   steps:
-    - name: Decrypt secrets
+    - name: Decrypt repository
+      shell: bash
       run: | 
         sudo apt-get update && sudo apt-get install -y git-crypt
-        echo ${{ secrets.GIT_CRYPT_KEY }} | base64 -d | git-crypt unlock -
+        echo ${{ inputs.GIT_CRYPT_KEY }} | base64 -d | git-crypt unlock -
