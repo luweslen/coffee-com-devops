@@ -16,6 +16,8 @@ data "aws_iam_policy_document" "iam_access_policy_document" {
       "acm:*",
       "cloudfront:*",
       "rds:*",
+      "vpc:*",
+      "ec2:*",
     ]
     resources = ["*"]
   }
