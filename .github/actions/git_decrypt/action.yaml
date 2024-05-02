@@ -1,0 +1,14 @@
+
+name: Git Decrypt Action
+description: Install git-crypt and decrypt secrets
+inputs:
+  GIT_CRYPT_KEY:
+    required: true
+
+runs: 
+  using: composite
+  steps:
+    - name: Decrypt secrets
+      run: | 
+        sudo apt-get update && sudo apt-get install -y git-crypt
+        echo ${{ secrets.GIT_CRYPT_KEY }} | base64 -d | git-crypt unlock -
