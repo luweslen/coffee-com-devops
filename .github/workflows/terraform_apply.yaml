@@ -25,6 +25,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Git Decrypt
+        uses: ./.github/workflows/git_decrypt.yaml
+        with: 
+          GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
+
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
 
